@@ -26,6 +26,8 @@ helga_default_plugins:
   - stfu
 #  - webhooks
 
+helga_disabled_plugins: []
+
 helga_external_plugins: []
 
 helga_cmd_prefix: '!'

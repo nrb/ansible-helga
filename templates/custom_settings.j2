@@ -28,6 +28,12 @@ ENABLED_PLUGINS = [
     {% endfor %}
 ]
 
+DISABLED_PLUGINS = [
+    {% for plugin in helga_disabled_plugins %}
+    '{{ plugin }}',
+    {% endfor %}
+]
+
 COMMAND_PREFIX_CHAR = '{{ helga_cmd_prefix }}'
 WEBHOOKS_PORT = {{ helga_webhooks_port }}
 
