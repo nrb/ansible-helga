@@ -37,9 +37,11 @@ DISABLED_PLUGINS = [
 COMMAND_PREFIX_CHAR = '{{ helga_cmd_prefix }}'
 WEBHOOKS_PORT = {{ helga_webhooks_port }}
 WEBHOOKS_CREDENTIALS = [
+  {% if helga_webhooks_credentials is defined %}
   {% for creds in helga_webhooks_credentials -%}
   ('{{ creds.user }}', '{{ creds.pass }}'),
   {% endfor%}
+  {% endif %}
 ]
 
 # Twitter API
